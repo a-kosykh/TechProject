@@ -7,11 +7,14 @@ matrix:
         apt:
           packages:
             - g++-5
-            - libcurl
           sources: &sources
             - llvm-toolchain-precise
             - ubuntu-toolchain-r-test
-            
+before-install:
+  - su -
+  - apt-get update
+  - apt-cache search ^libcurl
+  - apt-get install <whatever_apt-cache_listed>
 script:
 - mkdir build
 - cd build
