@@ -10,9 +10,8 @@ matrix:
           sources: &sources
             - llvm-toolchain-precise
             - ubuntu-toolchain-r-test
-before-install:
-- apt-get install libcurl4-gnutls-dev
 script:
+- apt-get install libcurl4-gnutls-dev
 - mkdir build
 - cd build
 - cmake .. && make
