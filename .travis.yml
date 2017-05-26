@@ -11,7 +11,7 @@ matrix:
             - llvm-toolchain-precise
             - ubuntu-toolchain-r-test
 before_install:
-  - sudo apt-get install aria2 curl -y
+ - sudo apt-get install libcurl-dev
 script:
 - mkdir build
 - cd build
