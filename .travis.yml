@@ -11,10 +11,7 @@ matrix:
             - llvm-toolchain-precise
             - ubuntu-toolchain-r-test
 before-install:
-  - su -
-  - apt-get update
-  - apt-cache search ^libcurl
-  - apt-get install <whatever_apt-cache_listed>
+- apt-get install libcurl4-gnutls-dev
 script:
 - mkdir build
 - cd build
