@@ -26,10 +26,19 @@ script:
 - ls
 - cd
 - ls
+
 - find -name libcurl.a
 - find -name *.a
 - find -name *.lib
-- cd build/akosoj/TechProject
+
+- cd build/akosoj/TechProject/include
+- ls
+- cd
+
+- cd sources
+- ls
+- cd
+
 - mkdir build
 - cd build
 - cmake .. && make
