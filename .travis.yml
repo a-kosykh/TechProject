@@ -23,5 +23,5 @@ script:
 - sudo make install
 - ls
 - cd
-- cd build
+- ls
 - cmake .. && make
