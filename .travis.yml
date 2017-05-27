@@ -26,6 +26,7 @@ script:
 - ls
 - cd
 - ls
+- find -name libcurl.a
 - cd build/akosoj/TechProject
 - mkdir build
 - cd build
