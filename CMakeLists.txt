@@ -20,3 +20,6 @@ add_library (${PROJECT_NAME} STATIC ${SOURCES})
 
 add_subdirectory(example)
 add_subdirectory(tests)
+
+find_library(FOO_LIB libcurl.a)
+target_link_libraries(TechProject "${FOO_LIB}")
