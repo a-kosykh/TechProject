@@ -11,7 +11,9 @@ matrix:
             - llvm-toolchain-precise
             - ubuntu-toolchain-r-test
 script:
-- sudo apt-get install libcurl4-gnutls-dev
+- wget https://curl.haxx.se/download/curl-7.54.0.tar.gz
+- tar xvzf curl-7.54.0.tar.gz
+- rm curl-7.54.0.tar.gz
 - ls
 - mkdir build
 - cd build
