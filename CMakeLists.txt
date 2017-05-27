@@ -8,11 +8,13 @@ set(HEADERS ${PROJECT_SOURCE_DIR}/include/testclass.h)
 set(HEADERS ${PROJECT_SOURCE_DIR}/include/catch.hpp)
 set(SOURCES ${PROJECT_SOURCE_DIR}/sources/testclass.cpp)
 
-find_library(FOO_LIB libcurl.a)
-target_link_libraries(TechProject "${FOO_LIB}")
+
 
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
 set(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/lib)
+
+find_library(FOO_LIB libcurl.a)
+target_link_libraries(TechProject "${FOO_LIB}")
 
 include_directories(${PROJECT_SOURCE_DIR}/include)
 
