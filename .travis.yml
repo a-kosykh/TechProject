@@ -17,6 +17,10 @@ script:
 - tar xvzf curl-7.54.0.tar.gz
 - rm curl-7.54.0.tar.gz
 - ls
+- cd curl-7.54.0
+- ./configure
+- make
+- sudo make install
 - mkdir build
 - cd build
 - cmake .. && make
