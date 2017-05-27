@@ -24,4 +24,7 @@ script:
 - ls
 - cd
 - ls
-- cmake .. && make
+- cd
+- ls
+- cd build/akosoj/TechProject
+- cmake && make
