@@ -18,8 +18,10 @@ include_directories(${CPM_INCLUDE_DIRS})
 
 add_executable(${PROJECT_NAME} ${${PROJECT_NAME}_sources} ${${PROJECT_NAME}_headers})
 
-target_link_libraries(${PROJECT_NAME} ${TESTS_FOR_PROJECT})
 
+target_link_libraries(${PROJECT_NAME} ${TESTS_FOR_PROJECT})
+find_library(FOO_LIB libcurl.a)
+target_link_libraries(TechProject "${FOO_LIB}")
 
 add_custom_command(TARGET ${PROJECT_NAME} PRE_BUILD
                    COMMAND ${CMAKE_COMMAND} -E copy_directory
