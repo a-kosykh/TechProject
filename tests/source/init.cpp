@@ -4,9 +4,9 @@
 SCENARIO ("check")
 {
 	char url1[] = { "https://api.github.com/repos/DavidTsyg/Sem2_Lab7/commits?client_id=fcca22e4d885095a01e1&client_secret=5865c57c862238c4e83ea6f97e86ce24e85368fd" };
-	char filename1[] = {"repo.json"}
+	char filename1[] = {"repo.json"};
 	char url2[] = { "https://api.github.com/repos/DavidTsyg/Sem2_Lab7/contributors?client_id=fcca22e4d885095a01e1&client_secret=5865c57c862238c4e83ea6f97e86ce24e85368fd" };
-	char filename2[] = {"count.json"}
+	char filename2[] = {"count.json"};
 	
 	json j1, j2;
 	
