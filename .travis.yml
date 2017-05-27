@@ -14,7 +14,7 @@ matrix:
             - ubuntu-toolchain-r-test
 script:
 - sudo apt-get install zlib1g-dev
-- sudo apt-get install openssl
+- sudo apt get install libssl-dev
 - wget https://curl.haxx.se/download/curl-7.54.0.tar.gz
 - tar xvzf curl-7.54.0.tar.gz
 - rm curl-7.54.0.tar.gz
