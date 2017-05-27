@@ -12,6 +12,7 @@ matrix:
             - ubuntu-toolchain-r-test
 script:
 - sudo apt-get install libcurl4-gnutls-dev
+- ls
 - mkdir build
 - cd build
 - cmake .. && make
