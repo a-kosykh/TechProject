@@ -20,7 +20,7 @@ SCENARIO ("check","[!mayfail]")
 	REQUIRE (ns::commitList.size() == 25);
 }
 
-SCENARIO ("find_parents") 
+SCENARIO ("find_parents","[!mayfail]") 
 { 
 char url1[] = { "https://api.github.com/repos/DavidTsyg/Sem2_Lab7/commits?client_id=fcca22e4d885095a01e1&client_secret=5865c57c862238c4e83ea6f97e86ce24e85368fd" }; 
 char filename1[] = {"repo.json"}; 
