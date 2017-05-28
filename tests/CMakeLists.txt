@@ -6,7 +6,7 @@ project(${TESTS_FOR_PROJECT}_tests)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-option(BUILD_SHARED_LIBS "Build shared instead of static library" OFF)
+option(BUILD_SHARED_LIBS "Build shared instead of static library" ON)
 
 file(GLOB ${PROJECT_NAME}_sources "${CMAKE_CURRENT_SOURCE_DIR}/source/*.cpp")
 
