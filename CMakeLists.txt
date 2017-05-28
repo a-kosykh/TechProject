@@ -15,9 +15,10 @@ set(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/lib)
 include_directories(${PROJECT_SOURCE_DIR}/include)
 
 add_library (${PROJECT_NAME} STATIC ${SOURCES})
-add_library( curl UNKNOWN IMPORTED)
-set_property(TARGET curl PROPERTY IMPORTED_LOCATION "/usr/lib/libcurl.so.4")
-target_link_libraries(TechProject curl)
+
 
 add_subdirectory(example)
 add_subdirectory(tests)
+
+find_library(FOO_LIB libcurl.a)
+target_link_libraries(TechProject "${FOO_LIB}")
