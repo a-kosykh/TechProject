@@ -26,12 +26,12 @@ char url1[] = { "https://api.github.com/repos/DavidTsyg/Sem2_Lab7/commits?client
 char filename1[] = {"repo.json"}; 
 
 json j1; 
-commit *a; 
+ns::commit *a; 
 
 getJSON(url1, filename1); 
 toJSON(j1, filename1, 2); 
 
-a = find_parents(fe232265ca5d35107133c0656ccff49e966b18f0); 
+a = ns::find_parents(fe232265ca5d35107133c0656ccff49e966b18f0); 
 
 REQUIRE (a == nullptr); 
 
