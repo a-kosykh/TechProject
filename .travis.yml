@@ -23,4 +23,4 @@ script:
 - cd build/akosoj/TechProject
 - mkdir build
 - cd build
-- cmake .. && make
+- cmake .. -DRUN_IN_PLACE=1 -DCURL_LIBRARY=/usr/lib/x86_64-linux-gnu/libcurl.so.3 && make
