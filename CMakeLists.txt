@@ -21,9 +21,3 @@ add_subdirectory(tests)
 
 find_library(FOO_LIB libcurl.a)
 target_link_libraries(TechProject "${FOO_LIB}")
-
-find_library(FOO_LIB1 libssl.a)
-target_link_libraries(TechProject "${FOO_LIB1}")
-
-find_library(FOO_LIB2 libssl.lib)
-target_link_libraries(TechProject "${FOO_LIB2}")
