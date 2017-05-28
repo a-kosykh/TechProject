@@ -42,8 +42,6 @@ script:
 - find -name *.a
 - find -name *.lib
 
-- sudo ln -fs /usr/lib/libcurl.so.4 /usr/local/lib/
-
 - cd build/akosoj/TechProject
 - mkdir build
 - cd build
