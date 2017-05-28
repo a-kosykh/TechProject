@@ -15,12 +15,10 @@ matrix:
 script:
 - sudo apt-get install zlib1g-dev
 
-- wget https://www.openssl.org/source/openssl-1.0.2l.tar.gz
-- tar xvzf openssl-1.0.2l.tar.gz
-- cd openssl-1.0.2l
-- sudo ./config
-- sudo make install
-- openssl version -v
+- cd
+- sudo apt-get install libssl-dev
+- openssl version -v 
+
 - cd
 - cd build/akosoj/TechProject
 
@@ -30,7 +28,7 @@ script:
 - ls
 - cd
 - cd build/akosoj/TechProject/curl-7.54.0
-- LDFLAGS=-R/usr/local/ssl/lib ./configure --disable-ftp --disable-file --disable-ldap --disable-dict --disable-telnet --disable-tftp --disable-rtsp --disable-pop3 --disable-imap --disable-smtp --disable-gopher --disable-ares --disable-debug --without-zlib --without-libidn --without-librtmp
+- ./configure --disable-ftp --disable-file --disable-ldap --disable-dict --disable-telnet --disable-tftp --disable-rtsp --disable-pop3 --disable-imap --disable-smtp --disable-gopher --disable-ares --disable-debug --without-zlib --without-libidn --without-librtmp
 - make
 - sudo make install
 - sudo ldconfig
