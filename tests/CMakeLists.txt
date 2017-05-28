@@ -15,9 +15,12 @@ include_directories(${${TESTS_FOR_PROJECT}_INCLUDE_DIRS}})
 
 
 include_directories(${CPM_INCLUDE_DIRS})
+add_library( curl UNKNOWN IMPORTED)
+set_property(TARGET curl PROPERTY IMPORTED_LOCATION "/usr/lib/libcurl.so.4")
 
 add_executable(${PROJECT_NAME} ${${PROJECT_NAME}_sources} ${${PROJECT_NAME}_headers})
 
+target_link_libraries(TechProject curl)
 
 target_link_libraries(${PROJECT_NAME} ${TESTS_FOR_PROJECT})
 
