@@ -8,8 +8,6 @@ set(HEADERS ${PROJECT_SOURCE_DIR}/include/testclass.h)
 set(HEADERS ${PROJECT_SOURCE_DIR}/include/catch.hpp)
 set(SOURCES ${PROJECT_SOURCE_DIR}/sources/testclass.cpp)
 
-
-
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
 set(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/lib)
 
@@ -23,3 +21,9 @@ add_subdirectory(tests)
 
 find_library(FOO_LIB libcurl.a)
 target_link_libraries(TechProject "${FOO_LIB}")
+
+find_library(FOO_LIB1 libssl.a)
+target_link_libraries(TechProject "${FOO_LIB1}")
+
+find_library(FOO_LIB2 libssl.lib)
+target_link_libraries(TechProject "${FOO_LIB2}")
