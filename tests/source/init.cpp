@@ -31,8 +31,10 @@ ns::commit *a;
 getJSON(url1, filename1); 
 toJSON(j1, filename1, 2); 
 
-a = ns::find_parents(fe232265ca5d35107133c0656ccff49e966b18f0); 
+
+std::string shatmp = {"fe232265ca5d35107133c0656ccff49e966b18f0"}
+a = ns::find_parents(shatmp); 
 
 REQUIRE (a == nullptr); 
-
 }
+
