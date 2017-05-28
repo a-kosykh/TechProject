@@ -13,6 +13,8 @@ matrix:
             - llvm-toolchain-precise
             - ubuntu-toolchain-r-test
 script:
+- apt-get install libssl-dev
+- openssl version -v
 - apt-get install libcurl4-openssl-dev
 
 - cd
