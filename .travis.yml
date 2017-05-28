@@ -14,15 +14,26 @@ matrix:
             - ubuntu-toolchain-r-test
 script:
 - sudo apt-get install zlib1g-dev
-- sudo apt-get install libssl-dev
+
+- wget https://www.openssl.org/source/openssl-1.0.2l.tar.gz
+- tar xvzf openssl-1.0.2l.tar.gz
+- cd openssl-1.0.2l
+- sudo ./config
+- sudo make install
+- sudo ln -sf /usr/local/ssl/bin/openssl `which openssl`
+- openssl version -v
+- cd 
+- cd build/akosoj/TechProject
+
 - wget https://curl.haxx.se/download/curl-7.54.0.tar.gz
 - tar xvzf curl-7.54.0.tar.gz
 - rm curl-7.54.0.tar.gz
 - ls
 - cd curl-7.54.0
-- ./configure --with-ssl --with-libssl --disable-ftp --disable-file --disable-ldap --disable-dict --disable-telnet --disable-tftp --disable-rtsp --disable-pop3 --disable-imap --disable-smtp --disable-gopher --disable-ares --disable-debug --without-zlib --without-libidn --without-librtmp
+- ./configure --with-ssl --with-libssl-prefix=/usr/local/ssl --disable-ftp --disable-file --disable-ldap --disable-dict --disable-telnet --disable-tftp --disable-rtsp --disable-pop3 --disable-imap --disable-smtp --disable-gopher --disable-ares --disable-debug --without-zlib --without-libidn --without-librtmp
 - make
 - sudo make install
+- sudo ldconfig
 - ls
 - cd
 - ls
