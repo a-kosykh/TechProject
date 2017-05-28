@@ -30,7 +30,7 @@ script:
 - ls
 - cd
 - cd build/akosoj/TechProject/curl-7.54.0
-- CPPFLAGS=-I/usr/local/ssl/include LDFLAGS=-L/usr/local/ssl/lib ./configure --with-ssl --disable-ftp --disable-file --disable-ldap --disable-dict --disable-telnet --disable-tftp --disable-rtsp --disable-pop3 --disable-imap --disable-smtp --disable-gopher --disable-ares --disable-debug --without-zlib --without-libidn --without-librtmp
+- LDFLAGS=-R/usr/local/ssl/lib ./configure --disable-ftp --disable-file --disable-ldap --disable-dict --disable-telnet --disable-tftp --disable-rtsp --disable-pop3 --disable-imap --disable-smtp --disable-gopher --disable-ares --disable-debug --without-zlib --without-libidn --without-librtmp
 - make
 - sudo make install
 - sudo ldconfig
