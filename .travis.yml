@@ -31,6 +31,7 @@ script:
 - find -name libcurl.a
 - find -name *.a
 - find -name *.lib
+- sudo find -name "*ssl*"
 
 - cd build/akosoj/TechProject
 - mkdir build
