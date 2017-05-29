@@ -51,5 +51,5 @@ SCENARIO ("get_parents","[!mayfail]")
 	getJSON(url1, filename1); 
 	toJSON(j1, filename1, 2); 
 	ns::get_parents(j1, 25, a);
-	REQUIRE (c.sha == a->parents[0].first); 
+	REQUIRE (c.sha == a->parents[0]->first); 
 }
