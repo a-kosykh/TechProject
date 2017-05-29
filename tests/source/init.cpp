@@ -46,10 +46,10 @@ SCENARIO ("get_parents","[!mayfail]")
 
 	json j1; 
 	ns::commit c(j1, 0); 
-	ns::commit *a = new commit(j1,1); 
+	ns::commit *a = new ns::commit(j1,1); 
 
 	getJSON(url1, filename1); 
 	toJSON(j1, filename1, 2); 
-	ns::get_parents( j1, 25, a) 
+	ns::get_parents(j1, 25, a);
 	REQUIRE (c.sha == a->parents[0].first); 
 }
