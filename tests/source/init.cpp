@@ -38,9 +38,9 @@ SCENARIO ("find_parents","[!mayfail]")
 	REQUIRE (a == nullptr); 
 }
 
-SCENARIO ("get_parents") 
+SCENARIO ("get_parents","[!mayfail]") 
 { 
-	char url1[] = { "https://api.github.com/repos/DavidTsyg/Sem2_Lab7/comm.." }; 
+	char url1[] = { "https://api.github.com/repos/DavidTsyg/Sem2_Lab7/commits?client_id=fcca22e4d885095a01e1&client_secret=5865c57c862238c4e83ea6f97e86ce24e85368fd" }; 
 	char filename1[] = {"repo.json"}; 
 
 
@@ -50,10 +50,6 @@ SCENARIO ("get_parents")
 
 	getJSON(url1, filename1); 
 	toJSON(j1, filename1, 2); 
-	ns::get_parents( j1, 25, a); 
-	string a ={""}; 
-	for (auto i = a.begin(); i != a.end(); ++i) { 
-		a += (*i).first; 
-	} 
-	REQUIRE (c.sha == a); 
+	ns::get_parents(j1, 25, a);
+	REQUIRE (c.sha == a->parents.begin()->first); 
 }
